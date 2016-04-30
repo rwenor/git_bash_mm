@@ -1,0 +1,23 @@
+[user]
+	email = rwe@netcom.no
+	name = Rolf Eriksen
+[filter "hawser"]
+	clean = git hawser clean %f
+	smudge = git hawser smudge %f
+	required = true
+[push]
+	default = upstream
+[core]
+	autocrlf = input
+	excludesfile = /Users/rolf/.gitignore_global
+	editor = nano
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[color]
+	ui = auto
+[merge]
+	conflictstyle = diff3
