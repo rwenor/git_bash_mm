@@ -8,3 +8,5 @@ cp .bash_profile ~/.bash_profile
 git config --global core.editor "nano" &
 git config --global push.default upstream &
 git config --global merge.conflictstyle diff3
+
+git push --set-upstream origin master
